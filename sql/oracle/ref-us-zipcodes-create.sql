@@ -68,7 +68,3 @@ begin
 commit;
 end;
 /
-
--- load data
-
-@ '../common/ref-us-zipcodes-data.sql'

@@ -61,7 +61,3 @@ select acs_reference__new (
     now()
 );
 -- load data
-
-begin;
-\i ../common/ref-us-zipcodes-data.sql
-end;
