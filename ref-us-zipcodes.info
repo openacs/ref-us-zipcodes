@@ -7,7 +7,7 @@
     <initial-install-p>f</initial-install-p>
     <singleton-p>t</singleton-p>
 
-    <version name="0.1d" url="http://www.mayuli.com/acs-repository/download/apm/ref-us-zipcodes-0.1d.apm">
+    <version name="2.0" url="http://www.mayuli.com/acs-repository/download/apm/ref-us-zipcodes-2.0.apm">
     <database-support>
         <database>oracle</database>
         <database>postgresql</database>
@@ -15,9 +15,9 @@
         <owner url="mailto:jon@jongriffin.com">Jon Griffin</owner>
         <summary>US Zipcodes</summary>
         <vendor url="http://www.mayuli.com">Mayuli Enterprises, LLC</vendor>
-        <description format="text/html">Provides zipcode, name, FIPS state and county codes, latitude and longitude.  Does not provide ZIP+4 data.</description>
+        <description format="text/html">Provides zipcode, name, FIPS state and county codes, latitude and longitude.  Does not provide ZIP+4 data. zipcode data is merged with ZCTL data from US Census Bureau. see http://www.census.gov/geo/ZCTA/zcta.html</description>
 
-        <provides url="ref-us-zipcodes" version="0.1d"/>
+        <provides url="ref-us-zipcodes" version="2.0"/>
         <requires url="acs-kernel" version="4.6.2"/>
         <requires url="ref-us-counties" version="0.1d"/>
         <requires url="ref-us-states" version="0.1d"/>
