@@ -14,7 +14,7 @@
     </database-support>
         <owner url="mailto:jon@jongriffin.com">Jon Griffin</owner>
         <summary>US Zipcodes</summary>
-        <vendor url="www.mayuli.com">Mayuli Enterprises, LLC</vendor>
+        <vendor url="http://www.mayuli.com">Mayuli Enterprises, LLC</vendor>
         <description format="text/html">Provides zipcode, name, FIPS state and county codes, latitude and longitude.  Does not provide ZIP+4 data.</description>
 
         <provides url="ref-us-zipcodes" version="0.1d"/>
