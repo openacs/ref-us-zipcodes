@@ -7,15 +7,15 @@
 create table us_zipcodes (
     zipcode           char(5)        
                       constraint us_zipcodes_zipcode_nn not null,
-    name              varchar2(100)       
+    name              varchar(100)       
                       constraint us_zipcodes_name_nn not null,
     fips_state_code   char(2)
                       constraint us_zipcodes_fips_fk 
                       references us_states(fips_state_code),
     fips_county_code  char(6)
 	              constraint us_county_codes_nn not null,
-    latitude          number,
-    longitude         number,
+    latitude          numeric,
+    longitude         numeric,
     --
     -- Some zipcodes straddle state boundaries, so the zipcode itself
     -- isn't unique. We form a primary key for this table from the
@@ -54,13 +54,14 @@ Latitude in decimal degrees.
 
 -- add this table into the reference repository
 select acs_reference__new (
-    table_name     => 'US_ZIPCODES',
-    package_name   => 'US_ZIPCODE',
-    source         => 'US Census Bureau',
-    source_url     => 'http://www.census.gov/geo/www/tiger/zip1999.html',
-    last_update    => to_date('1999-11-30','YYYY-MM-DD'),
-    effective_date => sysdate()
+    'US_ZIPCODES',
+    '1999-11-30',
+    'US Census Bureau',
+    'http://www.census.gov/geo/www/tiger/zip1999.html',
+    now()
 );
 -- load data
 
+begin;
 \i ../common/ref-us-zipcodes-data.sql
+end;
